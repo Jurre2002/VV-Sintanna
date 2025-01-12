@@ -1,0 +1,922 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+nav {
+    position: relative;
+    background-color: black;
+    padding: 1.5rem;
+    display: flex;
+}
+
+nav img {
+    width: 4.5rem;
+    text-decoration: none;
+    list-style: none;
+    margin-left: 3rem;
+}
+
+/* .sticky {
+    position: fixed; 
+    top: 0;
+    left: 0;
+    width: 100%; 
+    z-index: 1000; 
+} */
+
+
+nav ul {
+    display: flex;
+    list-style: none;
+    text-decoration: none;
+    color: white;
+    gap: 2.5rem;
+    font-size: 20px;
+    margin-left: 3.5rem;
+    align-items: center;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+nav ul li i {
+    margin-left: 0.3rem;
+}
+
+.word_lid i {
+    margin-left: 4rem;
+}
+
+.word_lid li {
+    background-color: white;
+    padding: 5px 15px 5px 15px;
+    border-radius: 10px;
+}
+
+.word_lid li a {
+    color: black;
+    font-weight: bold;
+}
+
+.submenu {
+    display: none;
+    position: absolute;
+    background-color: rgb(19, 19, 19);
+    top: 100%;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    padding: 2rem 8rem;
+    margin: 0;
+}
+
+.submenu li a {
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+    display: block;
+}
+
+.submenu li a:hover {
+    background-color: grey;
+}
+
+.submenu.visible {
+    display: flex; 
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.pupillen, .junioren, .Meiden, .Heren, .Vrouwen {
+    margin-left: 3rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.pupillen {
+    margin-left: 4rem;
+}
+
+.pupillen h1, .junioren h1, .Meiden h1, .Heren h1, .Vrouwen h1 {
+    margin-bottom: 3rem;
+    color: white;
+    font-size: 25px;
+    text-decoration: underline;
+    text-underline-offset: 1.5rem;
+    text-decoration-thickness: 2px;
+    text-decoration-color: rgb(255, 255, 255);
+}
+
+.subsubmenu {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.subsubmenu li a {
+    padding: 0; /* Ruimte binnen de links verminderen */
+    font-size: 1rem; /* Optioneel: Maak de tekst iets kleiner om de afstand optisch te verkleinen */
+}
+
+.trainingschema {
+    color: white;
+    font-size: 25px;
+    margin-left: 3rem;
+}
+
+.dropdown1, .dropdown2, .dropdown3, .dropdown4 {
+    cursor: pointer;
+}
+
+.dropdown1:hover > a, .dropdown2:hover > a, .dropdown3:hover > a, .dropdown4:hover > a {
+    color: lightgrey;
+}
+
+.dropdown1 .fa-chevron-down, .dropdown2 .fa-chevron-down, .dropdown3 .fa-chevron-down, .dropdown4 .fa-chevron-down {
+    transition: transform 0.1s ease; 
+}
+
+.dropdown1.open .fa-chevron-down, .dropdown2.open .fa-chevron-down, .dropdown3.open .fa-chevron-down, .dropdown4.open .fa-chevron-down {
+    transform: rotate(180deg); 
+}
+
+.bestuur_comissies {
+    display: flex;
+    flex-direction: column;
+    margin-left: 11rem;
+    border-right: 2px solid white; /* Witte verticale lijn */
+    padding-right: 10rem; /* Optioneel: ruimte creëren rechts van de lijn */
+}
+
+.bestuur_comissies h1 {
+    margin-bottom: 3rem;
+    color: white;
+    font-size: 25px;
+    text-decoration: underline;
+    text-underline-offset: 1.5rem;
+    text-decoration-thickness: 2px;
+    text-decoration-color: rgb(255, 255, 255);
+}
+
+.bestuur_comissies .subsubmenu {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.Overige_declub {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    margin-left: 10rem;
+}
+
+.Overige_declub h1 a {
+    font-size: 25px;
+}
+
+.Overige_wedstrijdzaken1, .Overige_wedstrijdzaken2 {
+    display: flex;
+    flex-direction: column;
+}
+
+.Overige_wedstrijdzaken1 h1 a, .Overige_wedstrijdzaken2 h1 a {
+    font-size: 25px;
+    gap: 2rem;
+}
+
+.Overige_wedstrijdzaken1 {
+    border-right: 2px solid white; /* Witte verticale lijn */
+    padding-right: 10rem; /* Optioneel: ruimte creëren rechts van de lijn */
+    margin-left: 18rem;
+    gap: 2rem;
+}
+
+.Overige_wedstrijdzaken2 {
+    margin-left: 8rem;
+    gap: 2rem;
+}
+
+.Overige_sponsoring {
+    display: flex;
+    flex-direction: column;
+    border-right: 2px solid white; /* Witte verticale lijn */
+    padding-right: 10rem; /* Optioneel: ruimte creëren rechts van de lijn */
+    margin-left: 18rem;
+    gap: 2rem;
+}
+
+.Overige_sponsoring h1 a{
+    font-size: 25px;
+    gap: 2rem;
+}
+
+.word_lid a {
+    color: black;
+    text-decoration: none;
+    background-color: white;
+    padding: 5px 10px;
+    border-radius: 10px;
+    font-weight: bold;
+}
+
+.word_lid2 {
+    display: none;
+}
+
+.submenu1 {
+    display: none;
+}
+
+.help_items {
+    display: none;
+}
+
+/* Banner items */
+
+.banner {
+    position: relative;
+    width: 100%;
+}
+
+.banner img {
+    width: 100%;
+    height: 46rem;
+    object-fit: cover;
+}
+
+.banner-content {
+    position: absolute; /* Positioneer de tekst absoluut bovenop de afbeelding */
+    top: 27.5%; /* Zet de tekst verticaal in het midden van de afbeelding */
+    left: 30rem; /* Zet de tekst horizontaal in het midden van de afbeelding */
+    transform: translate(-50%, -50%); /* Verplaats de tekst precies in het midden */
+    color: white; /* Zorg ervoor dat de tekst goed zichtbaar is op de afbeelding */
+    padding: 1rem; /* Voeg wat padding toe zodat de tekst niet tegen de randen van de afbeelding aanligt */
+}
+
+.banner-content h1 {
+    font-size: 3rem;
+    font-weight: bolder;
+    -webkit-text-stroke: 1.5px white; 
+    color: white; 
+}
+
+
+.banner-content p {
+    font-size: 1.5rem;
+    font-weight:lighter;
+    margin-top: 1.5rem;
+    max-width: 500px;
+}
+
+.lees-verslag a {
+    color: white; 
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.2rem;
+    background-color: black;
+    padding: 1rem 1.5rem;
+    display: inline-block;
+    margin-top: 1.5rem;
+    font-weight: bolder;
+}
+
+/* Nieuws items */
+
+.nieuws {
+    display: flex;
+    flex-wrap: wrap; /* Sta items toe om naar een nieuwe rij te gaan */
+    justify-content: center; /* Centreer de items horizontaal */
+    margin-top: 5rem;
+}
+
+.nieuws-items {
+    box-sizing: border-box; /* Houd rekening met padding/marges in de breedteberekening */
+    margin-left: 1.5rem;
+    margin-top: 3rem;
+    margin-right: 1.5rem;
+    background-color: rgb(242, 242, 242);
+}
+
+.nieuws-content {
+    max-width: 250px;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    margin-left: 1rem;
+}
+
+.nieuws-content p {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.nieuws-content a {
+    color: white; 
+    text-decoration: none;
+    font-weight: bold;
+    background-color: black;
+    padding: 0.5rem 1.3rem;
+    display: inline-block;
+    font-weight: bolder;
+}
+
+/* Volgende wedstrijd */
+
+.volgende_wedstrijd {
+    margin-top: 8rem;
+    display: flex;
+    justify-content: center;
+    gap: 9rem;
+    background-color: black;
+}
+
+.wedstrijd_gegevens {
+    display: flex;
+    flex-direction: column;
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+}
+
+.wedstrijd_gegevens p {
+    font-size: 20px;
+    color: white;
+}
+
+.wedstrijd_gegevens h2 {
+    font-size: 30px;
+    color: white;
+}
+
+.volgende_wedstrijd img {
+    height: 100px;
+}
+
+.wedstrijd_afbeelding {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3rem;
+}
+
+.lijn {
+    width: 100%; 
+    height: 2px; 
+    background-color: white; 
+    margin: 1rem 0;
+}
+
+.team {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.team p {
+    font-size: 18px; 
+    text-align: center;
+    margin-top: 1rem;
+    color: white;
+}
+
+.filter_functies {
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+}
+
+.versus {
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.filter_functies a {
+    color: black; 
+    text-decoration: none;
+    font-weight: bold;
+    background-color: white;
+    padding: 0.7rem 1.5rem;
+    border-radius: 10px;
+    display: inline-block;
+    font-weight: bolder;
+    
+}
+
+.filter_functies span i {
+    margin-right: 10px;
+}
+
+/* Sponsoren */
+
+.sponsoren {
+    margin-top: 8rem;
+}
+
+.sponsoren h2 {
+    text-align: center;
+    font-size: 30px;
+    margin-bottom: 4rem;
+}
+
+.slideshow {
+    position: relative;
+    overflow: hidden;
+    width: 100%; /* Breedte van de container */
+    max-width: 1050px; /* Optionele max-breedte */
+    height: 150px; /* Hoogte van de afbeeldingen */
+    margin: auto;
+}
+
+.slides {
+    display: flex;
+    width: max-content; /* Breedte van alle afbeeldingen samen */
+    animation: slide 15s linear infinite; /* Animatie */
+}
+
+.slides img {
+    width: auto;
+    height: 100%; /* Zorgt ervoor dat de afbeeldingen netjes passen */
+    margin-right: 0.5rem;
+    margin-left: 0.5rem;
+}
+
+@keyframes slide {
+    from {
+        transform: translateX(0%);
+    }
+    to {
+        transform: translateX(-50%);
+    }
+}
+
+.slides::after {
+    content: "";
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+}
+
+/* Footer */
+
+footer {
+    margin-top: 8rem;
+    background-color: black;
+}
+
+.footer_logo img {
+    width: 100px;
+    margin-top: 5rem;
+}
+
+.footer_items1 {
+    display: flex;
+    justify-content: center;
+    gap: 7.5rem;
+    margin-bottom: 2rem;
+}
+
+.lijn1 {
+    width: 72%; 
+    height: 2px; 
+    background-color: white; 
+    margin: 1rem auto;
+}
+
+.social_media {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    margin-right: 15rem;
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+.links_socialmedia {
+    margin-top: 5rem;
+    margin-bottom: 1rem;
+}
+
+.links_socialmedia h2 {
+    font-size: 25px;
+    margin-bottom: 1rem;
+    color: white;
+    margin-top: 1rem;
+}
+
+.links_socialmedia p {
+    font-size: 18px;
+    color: white;
+    padding: 0.5rem 0;
+}
+
+.social_media h2 {
+    font-size: 25px;
+    color: white;
+    margin-bottom: 5rem;
+}
+
+.social_media i {
+    font-size: 25px;
+    color: white;
+    margin-bottom: 5rem;
+}
+
+.lijn2 {
+    width: 2px; 
+    height: 1.7rem; 
+    background-color: white; 
+    margin-bottom: 5rem;
+}
+
+.volgende_wedstrijd1 {
+    display: none;
+}
+
+.footer_items1_1 {
+    display: none;
+}
+
+.footer_items2_1 {
+    display: none;
+}
+
+
+
+@media (max-width: 375px) {
+
+    body {
+        margin: 0;
+        padding: 0;
+    }
+
+    nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0.8rem;
+        max-width: 375px;
+    }
+
+    nav img {
+        width: 50px;
+        height: 50px;
+        margin: 0;
+    }
+
+    nav ul {
+        align-items: baseline;
+    }
+
+    .links {
+        display: none; 
+    }
+
+    .word_lid {
+        display: none;
+    }
+
+    .word_lid2 {
+        display: flex; 
+        flex-direction: row; 
+        margin: 0;
+    }
+
+    .word_lid2 a {
+        color: black;
+        text-decoration: none;
+        background-color: white;
+        font-size: 14px;
+        padding: 5px 10px;
+        border-radius: 15px;
+        font-weight: bold;
+        margin-left: 2rem;
+    }
+
+    .fa-magnifying-glass {
+        color: white;
+        font-size: 25px;
+    }
+
+       
+       .help_items {
+        position: relative; 
+        z-index: 10; 
+    }
+
+    .fa-bars {
+        color: white;
+        font-size: 25px;
+        margin-left: 1rem; 
+    }
+
+    
+    .fa-xmark {
+        display: none;
+    }
+
+    
+    .fa-xmark.active {
+        display: inline-block;
+        color: white;
+        font-size: 25px;
+        margin-left: 1rem; 
+        margin-right: 1.27rem;
+    }
+
+   
+    .fa-bars.active {
+        display: none;
+    }
+
+    .nav1 {
+        display: none; 
+        flex-direction: column;
+        position: absolute;
+        top: 100%; 
+        left: 0;
+        width: 100%; 
+        background-color: rgb(19, 19, 19);; 
+        padding: 2rem;
+        gap: 1rem;
+        margin: 0;
+        z-index: 1000; 
+    }
+   
+
+    .submenu1 {
+        display: none;
+        display: flex;
+        flex-direction: column;
+        margin: 0;
+        padding: 0;
+        gap: 1.5rem;
+    }
+    
+    .nav1 a {
+        color: white;
+        text-decoration: none;
+        display: flex;
+        font-size: 15px;
+    }
+
+    .subsubmenu1 {
+        display: none; 
+        padding-left: 1rem;
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    .rotate {
+        transform: rotate(180deg);
+    }
+
+    li a {
+        font-weight: bolder;
+    }
+
+    .subsubmenu1 a {
+        font-weight: 100;
+    }
+
+    .subsubmenu1 {
+        display: none;
+        position: relative;
+        background-color: rgb(19, 19, 19);
+        padding: 0.5rem 0;
+        z-index: 1000;
+        margin: 0 1rem;
+    }
+    
+    .subsubmenu1 a {
+        color: white;
+        text-decoration: none;
+        font-size: 13px;
+        display: block;
+        padding: 0.2rem 0;
+    }
+
+    .help_items {
+        display: block;
+    }
+
+    .banner {
+        display: none;
+    }
+
+    /* Nieuws */
+
+    .nieuws-items {
+        display: flex;
+        flex-direction: column;
+        margin-right: 1rem;
+        margin-left: 1rem;
+        border-radius: 10px;
+    }
+
+    .nieuws {
+        margin:auto;
+    }
+
+    .nieuws-items img {
+        border-radius: 10px 10px 0 0;
+        height: 200px;
+        width: 330px;
+    }
+
+    .nieuws-items:nth-child(n+4) {
+        display: none;
+    }
+
+    /* Wedstrijdzaken */
+
+    .volgende_wedstrijd {
+        display: none;
+    }
+
+    .volgende_wedstrijd1 {
+        display: flex;
+        flex-direction: column;
+        margin-right: 1rem;
+        margin-top: 70px;
+        margin-left: 1rem;
+    }
+
+    .volgende_wedstrijd1 h2 {
+        font-size: 18px;
+        margin-top: 2rem;
+    }
+
+    .team1 {
+        display: flex;
+        flex-direction: row;
+        gap: 0.5rem;
+        align-items: center;
+    }
+
+    .wedstrijd_gegevens1 img {
+        height: 30px;
+    }
+
+    .lijn3 {
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+        width: 345px;
+        height: 1px;
+        background-color: rgb(169, 169, 169);
+    }
+
+    .team1 p {
+        font-size: 14px;
+        max-width: 100px;
+    }
+
+    .team1 h2 {
+        font-size: 16px;
+        margin-right: 1rem;
+        margin-left: 1rem;
+    }
+
+    .programma1 {
+        display: flex;
+        justify-content: center;
+    }
+
+    .programma1 a {
+        color: white; 
+        text-decoration: none;
+        font-weight: bold;
+        background-color: black;
+        padding: 10px 18px;
+        display: inline-block;
+        font-weight: bolder;
+        margin-top: 2rem;
+        font-size: 14px;
+    }
+
+    .sponsoren h2 {
+        display: none;
+    }
+
+    .slides {
+        margin-top: 1rem;
+    }
+
+    .slides img {
+        height: 50px;
+    }
+
+    footer {
+        margin-top: 4rem;
+    }
+
+    .footer_items1 {
+        display: none;
+    }
+
+    .footer-items2 {
+        display: none;
+    }
+
+    .footer_logo img {
+        width: 50px;
+        margin-top: 2rem;
+    }
+
+    .footer_items1_1 {
+        margin-left: 1rem;
+        display: grid;
+        grid-template-columns: 1fr 1fr; /* Twee kolommen */
+        gap: 20px; /* Ruimte tussen de kolommen */
+    }
+    
+    .links_socialmedia1,
+    .links_socialmedia2 {
+        display: flex;
+        flex-direction: column; /* Plaatst de items in een kolom */
+    }
+    
+    .links_socialmedia1 {
+        grid-column: 1; /* Zet deze in de eerste kolom */
+    }
+    
+    .links_socialmedia2 {
+        grid-column: 2; /* Zet deze in de tweede kolom */
+    }
+
+   .links_socialmedia1 h2, .links_socialmedia2 h2 {
+        color: white;
+        font-size: 16px;
+        margin-bottom: 0.5rem;
+   }
+
+   .links_socialmedia1 p, .links_socialmedia2 p {
+        color: white;
+        font-size: 12px;
+        gap: 0.2rem;
+   }
+
+   .footer_items2_1 {
+    display: flex;
+   }
+
+   .footer_items2_1 p {
+    color: white;
+    font-size: 14px;
+    margin-left: 1rem;
+    margin-bottom: 2rem;
+    margin-top: 2rem;
+   }
+
+   .lijn4 {
+     width: 1px; 
+     height: 1rem; 
+     background-color: white; 
+     margin-left: 1rem;
+     margin-top: 2rem;
+   }
+
+   .footer_items2_1 i {
+    color: white;
+    font-size: 14px;
+    margin-left: 1rem;
+    margin-bottom: 2rem;
+    margin-top: 2rem;
+   }
+
+
+
+}
+
+/*scrolltrigger. De code hieronder zorgt ervoor dat ze buiten het scherm beginnen */
+
+
+.wedstrijd_gegevens { 
+    opacity: 0;
+    transform: translateX(-100%);
+}
+
+.filter_functies {
+    opacity: 0;
+    transform: translateX(100%);
+}
+
+.wedstrijd_afbeelding {
+    opacity: 0;
+    transform: translateY(100%);
+}
+
+
+
+
+
+
+
+
